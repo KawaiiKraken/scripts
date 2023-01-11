@@ -1,0 +1,7 @@
+#!/bin/sh
+
+clipboard="$(xclip -o)"
+
+file="$HOME/.snippets"
+
+echo "$clipboard" >> "$file"
