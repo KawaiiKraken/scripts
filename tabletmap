@@ -1,0 +1,19 @@
+#!/bin/bash
+
+monitor=HDMI-0
+label=Wacom
+
+echo "getting id list"
+xinput list | grep Wacom
+
+getidnum=$(xinput list | grep $label | awk '{print $9}' | tr -d "id=")
+
+for n in $getidnum
+do
+
+  xinput map-to-output $n $monitor
+  echo "mapping device $n to $monitor"
+
+done
+
+echo "done"

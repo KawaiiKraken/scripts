@@ -1,0 +1,6 @@
+#!/bin/bash
+while [ 1 == 1 ]
+do
+  sudo virsh attach-device win10 /home/kraken/keebusb.xml --current > /dev/null
+  sleep 5
+done

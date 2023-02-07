@@ -1,2 +1,2 @@
 #!/bin/bash
-FILTEREDALIASES=$(cat $HOME/.bash_aliases | sed '/^#/ d;/^$/d;s/^alias\s//g;s/=/ /' | dmenu -i -l 10); echo $FILTEREDALIASES | awk '{$1=""; print $0}' | tr -d "\"" | bash >/dev/null
+cat $HOME/.bash_aliases | sed '/^#/ d;/^$/d;s/^alias\s//g;s/=/ /' | dmenu -i -l 10 | awk '{$1=""; print $0}' | tr -d "\"" | bash >/dev/null

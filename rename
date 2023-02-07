@@ -1,0 +1,7 @@
+#/usr/bin/bash
+IFS='
+'
+for file in `ls *.flac`; do
+  NEWNAME=`echo "$file" | sed -E 's/(.*)\[.+\]/\1/'`
+  mv "$file" "$NEWNAME"
+done

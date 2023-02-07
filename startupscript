@@ -1,0 +1,3 @@
+st -e ncmpcpp & mpc random on & mpc searchadd artist "" & mpc pause-if-playing & sleep 0.3 && mpc toggle && mpc next
+st -e cava & $(sleep 0.1 && xdotool type fffffff)
+st -e python /home/kraken/scripts/textgen.py & xdotool key --repeat 7 Alt+Shift+Page_Up

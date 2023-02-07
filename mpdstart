@@ -1,0 +1,1 @@
+mpc random on & mpc searchadd artist "" & mpc pause-if-playing & sleep 0.3 && mpc toggle && mpc next
